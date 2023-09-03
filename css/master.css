@@ -1,0 +1,197 @@
+body {
+    background-color: #d7d7d7;
+    color: black;
+    
+}
+
+/* Newsletter */
+
+.newsletter {
+    position : fixed;
+    z-index : 9999;
+    right : 0;
+    left : 0;
+    width : 80%;
+    margin : auto;
+    padding : 18px;
+    transition : all .4s cubic-bezier(.4, 0, .2, 1);
+    background: #F0C27B; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #F0C27B , #4B1248); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #F0C27B , #b3a5b2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    
+    .newsletter.bottom {
+    bottom : -210px;
+    animation-name : cpnewsletterbottom;
+    animation-duration : 1s;
+    animation-iteration-count : 1;
+    border-radius : 10px 10px 0 0;
+    }
+    
+    @keyframes cpnewsletterbottom {
+    0% {
+        transform : translateY(100%);
+    }
+    100% {
+        transform : translateY(0%);
+    }
+    }
+    
+    .newsletter.bottom:hover {
+    bottom : 0;
+    }
+    
+    .newsletter.bottom .newsletter-icon {
+    margin : -54px auto 70px;
+    }
+    
+    .newsletter.bottom:hover .newsletter-icon {
+    margin-bottom : 0;
+    }
+    
+    .newsletter.top {
+    top : -255px;
+    animation-name : cpnewslettertop;
+    animation-duration : 1s;
+    animation-iteration-count : 1;
+    border-radius : 0 0 10px 10px;
+    }
+    
+    @keyframes cpnewslettertop {
+    0% {
+        transform : translateY(-100%);
+    }
+    100% {
+        transform : translateY(0%);
+    }
+    }
+    
+    .newsletter.top:hover {
+    top : 0;
+    }
+    
+    .newsletter.top form {
+    margin-bottom : 150px;
+    transition : all .8s cubic-bezier(.4, 0, .2, 1);
+    }
+    
+    .newsletter.top:hover form {
+    margin-bottom : 40px;
+    }
+    
+    .newsletter.top .newsletter-icon {
+    position : absolute;
+    bottom : 0;
+    left : 50%;
+    margin : 0 0 -40px -30px !important;
+    }
+    
+    .newsletter-icon {
+    width : 70px;
+    height : 70px;
+    text-align: center;
+    line-height: 70px;
+    cursor : pointer;
+    transition : all .8s cubic-bezier(.4, 0, .2, 1);
+    animation : cpnewslettericon 2s infinite;
+    border-radius : 100%;
+    box-shadow : 0 0 0 2px #8194ff;
+    background: #F0C27B; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #F0C27B , #dccddf); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #F0C27B , #d2bdd6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFF;
+    font-size: 22px;
+    }
+    
+    @keyframes cpnewslettericon {
+    0% {
+        box-shadow : 0 0 0 2px #9C27B0;
+    }
+    50% {
+        box-shadow : 0 0 0 1px #9C27B0;
+    }
+    90% {
+        box-shadow : 0 0 0 4px #9C27B0;
+    }
+    100% {
+        box-shadow : 0 0 0 1px #9C27B0;
+    }
+    }
+    
+    
+    .newsletter-title {
+    font-size : 26px;
+    margin-top : 10px;
+    text-align : center;
+    color : #FFF;
+    }
+    
+    .newsletter form {
+    margin : 26px auto;
+    text-align : center;
+    }
+    
+    @media screen and (min-width: 584px) {
+    .newsletter form {
+        width : 460px;
+    }
+    }
+    
+    .newsletter input {
+    display : inline-block;
+    }
+    
+    .newsletter input:focus ,
+    .newsletter textarea:focus {
+    outline : none;
+    box-shadow : none;
+    }
+    
+    .newsletter input[type=email] {
+    width : 70%;
+    padding : 10px;
+    border : none;
+    border-radius : 20px 0 0 20px;
+    background: rgba(255,255,255,0.2);
+    }
+    
+    .newsletter input[type='submit'] {
+    width : 21%;
+    padding : 10px;
+    cursor : pointer;
+    color : #ffffff;
+    border : none;
+    border-radius :0 20px 20px 0;
+    background : #bca0ba;
+    }
+    
+    .newsletter input[type='submit']:hover {
+    opacity : .9;
+    }
+    
+    @media screen and (max-width: 625px) {
+    .newsletter.bottom .newsletter-icon {
+        margin : -42px auto 70px;
+    }
+    .newsletter.bottom {
+        bottom : -175px;
+    }
+    
+    .newsletter.top {
+        top : -208px;
+    }
+    
+    .newsletter {
+        width : 97%;
+        padding : 0 10px;
+    }
+    .newsletter-title {
+        font-size : 18px;
+    }
+    .newsletter input[type=email] {
+        width : 62%;
+    }
+    .newsletter input[type='submit'] {
+        width : 30%;
+    }
+    }
