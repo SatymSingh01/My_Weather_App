@@ -7,8 +7,13 @@
     <title>My Weather App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        
 
+    </head>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -21,10 +26,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About this App</a>
+                        <a class="nav-link" href="about_this_app.html">About this App</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="dropdownLink" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -53,18 +58,18 @@
                             });
                         });
                     </script>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link disabled" aria-disabled="true">How to use?</a>
-                    </li>
+                    </li> -->
                 </ul>
-                <form class="d-flex" role="search">
-                    <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex"  role="search">
+                    <input id="city"  style="width: 50%;margin-left: 500px;" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="newsletter">
         <h1 class="my-4 text-center"> Weather for <span id = "cityName"></span></h1>
         <main>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -83,7 +88,7 @@
                                 <li>Max Temperature is <span id="max_temp"></span></li>
 
                             </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                            <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
                         </div>
                     </div>
                 </div>
@@ -101,7 +106,7 @@
                                 <!-- <li>Wind Speed is </li> -->
                                 <li>Feels Like <span id="feels_like"></span></li>
                             </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                            <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
                         </div>
                     </div>
                 </div>
@@ -124,7 +129,7 @@
                                 
                             
                             </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                            <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button> -->
                         </div>
                     </div>
                 </div>
@@ -138,6 +143,19 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <script src="main.js"></script>
+
+    <div class="container">
+        <!-- Newsletter -->
+          <div class="newsletter bottom"><!-- Can be aligned Top or Bottom -->
+            <div class="newsletter-icon"><i class="fa fa-envelope-o"></i></div>
+            <p class="newsletter-title">Subscribe to our email newsletter</p>
+            <form>
+              <input type="email" name="cpemail" placeholder="Enter your email.." required>
+              <input type="submit" value="Subscribe">
+            </form>
+          </div>
+          <!-- End Newsletter -->
+        </div>
 </body>
 
 </html>
